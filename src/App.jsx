@@ -3,9 +3,19 @@ import { useRoutes } from "react-router-dom";
 import ProductAdd from "./pages/ProductAdd";
 import ProductEdit from "./pages/ProductEdit";
 import ProductList from "./pages/ProductList";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 
 function App() {
   const routes = [
+    {
+      path: "register",
+      element: <Register />,
+    },
+    {
+      path: "login",
+      element: <Login />,
+    },
     {
       path: "product/list",
       element: <ProductList />,

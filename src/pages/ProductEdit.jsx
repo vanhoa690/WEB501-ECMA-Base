@@ -41,7 +41,7 @@ function ProductEdit() {
 
   return (
     <div>
-      <h1>Product Edit</h1>
+      <h1 className="text-center">Product Edit</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">

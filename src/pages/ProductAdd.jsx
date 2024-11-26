@@ -25,7 +25,7 @@ function ProductAdd() {
 
   return (
     <div>
-      <h1>ProductAdd</h1>
+      <h1 className="text-center">Product Add</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">
