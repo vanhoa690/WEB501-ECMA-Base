@@ -40,6 +40,8 @@ function ProductList() {
             <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">Price</th>
+            <th scope="col">Image</th>
+            <th scope="col">Description</th>
             <th scope="col">Actions</th>
           </tr>
         </thead>
@@ -50,6 +52,10 @@ function ProductList() {
                 <th scope="row">{product.id}</th>
                 <td>{product.name}</td>
                 <td>{product.price} USD</td>
+                <td>
+                  <img width={200} src={product.image} alt="image" />
+                </td>
+                <td>{product.description}</td>
                 <td>
                   <button
                     onClick={() => deleteProduct(product.id)}

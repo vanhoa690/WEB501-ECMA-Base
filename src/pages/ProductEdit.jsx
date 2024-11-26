@@ -50,7 +50,6 @@ function ProductEdit() {
           <input
             type="text"
             className="form-control"
-            id="name"
             {...register("name", {
               required: "Name is required",
             })}
@@ -64,7 +63,6 @@ function ProductEdit() {
           <input
             type="number"
             className="form-control"
-            id="price"
             {...register("price", {
               required: "Price is required",
               min: {
@@ -74,6 +72,28 @@ function ProductEdit() {
             })}
           />
           <small className="text-danger">{errors.price?.message}</small>
+        </div>
+        <div className="mb-3">
+          <label className="form-label">Image</label>
+          <input
+            type="text"
+            className="form-control"
+            {...register("image", {
+              required: "Image is required",
+            })}
+          />
+          <small className="text-danger">{errors.image?.message}</small>
+        </div>
+        <div className="mb-3">
+          <label className="form-label">Description</label>
+          <input
+            type="text"
+            className="form-control"
+            {...register("description", {
+              required: "Description is required",
+            })}
+          />
+          <small className="text-danger">{errors.description?.message}</small>
         </div>
         <button type="submit" className="btn btn-primary">
           Submit
