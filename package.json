@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "concurrently \"json-server --watch db.json -m ./node_modules/json-server-auth\" \"vite --open\"",
     "dev": "concurrently \"json-server --watch db.json -m ./node_modules/json-server-auth\" \"vite --open\"",
     "build": "vite build",
     "lint": "eslint .",
