@@ -24,7 +24,7 @@ function ProductList() {
         await axios.delete(`http://localhost:3000/products/${id}`);
         toast.success("Xoa thanh cong");
         // cap nhat danh sach
-        getProductList();
+        setProducts(products.filter((product) => product.id !== id));
       } catch (error) {
         console.log(error);
         toast.error("Xoa KO thanh cong");
