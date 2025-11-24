@@ -1,69 +1,99 @@
 import { Toaster } from "react-hot-toast";
+import { useState } from "react";
 
 function App() {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
-      {/* Header với Bootstrap */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div className="container">
-          <a className="navbar-brand" href="#">
+      {/* HEADER - Navbar Tailwind */}
+      <nav className="bg-blue-600 text-white shadow">
+        <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+          {/* Brand */}
+          <a href="#" className="text-xl font-semibold">
             <strong>WEB501 App</strong>
           </a>
 
+          {/* Mobile toggle */}
           <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
+            onClick={() => setOpen(!open)}
+            className="md:hidden block focus:outline-none"
           >
-            <span className="navbar-toggler-icon"></span>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              {open ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
           </button>
 
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav me-auto">
-              <li className="nav-item">
-                <a className="nav-link active" href="#">
-                  Trang chủ
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Danh sách
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Thêm mới
-                </a>
-              </li>
-            </ul>
+          {/* Menu desktop */}
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="#" className="hover:text-gray-200">
+              Trang chủ
+            </a>
+            <a href="#" className="hover:text-gray-200">
+              Danh sách
+            </a>
+            <a href="#" className="hover:text-gray-200">
+              Thêm mới
+            </a>
+          </div>
 
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Đăng nhập
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Đăng ký
-                </a>
-              </li>
-            </ul>
+          {/* Right menu desktop */}
+          <div className="hidden md:flex items-center space-x-6">
+            <a href="#" className="hover:text-gray-200">
+              Đăng nhập
+            </a>
+            <a href="#" className="hover:text-gray-200">
+              Đăng ký
+            </a>
           </div>
         </div>
+
+        {/* Mobile dropdown */}
+        {open && (
+          <div className="md:hidden bg-blue-700 border-t border-blue-500">
+            <div className="px-4 py-3 space-y-2">
+              <a href="#" className="block hover:text-gray-200">
+                Trang chủ
+              </a>
+              <a href="#" className="block hover:text-gray-200">
+                Danh sách
+              </a>
+              <a href="#" className="block hover:text-gray-200">
+                Thêm mới
+              </a>
+              <a href="#" className="block hover:text-gray-200">
+                Đăng nhập
+              </a>
+              <a href="#" className="block hover:text-gray-200">
+                Đăng ký
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
-      {/* Main content area */}
-      <div className="container mt-4">
-        <div className="row">
-          <div className="col-12">
-            <h1 className="display-4 text-center mb-4">
-              Chào mừng đến với WEB501
-            </h1>
-            <p className="lead text-center">Ứng dụng quản lý dữ liệu</p>
-          </div>
-        </div>
+      {/* MAIN CONTENT */}
+      <div className="max-w-6xl mx-auto mt-10 px-4 text-center">
+        <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB501</h1>
+        <p className="text-lg text-gray-600">Ứng dụng quản lý dữ liệu</p>
       </div>
 
       <Toaster />
