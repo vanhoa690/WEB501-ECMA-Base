@@ -1,33 +1,34 @@
 import { Toaster } from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
     <>
       <nav className="bg-blue-600 text-white shadow">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-          <a href="#" className="text-xl font-semibold">
+          <Link to="#" className="text-xl font-semibold">
             <strong>WEB501 App</strong>
-          </a>
+          </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="hover:text-gray-200">
+            <Link to="#" className="hover:text-gray-200">
               Trang chủ
-            </a>
-            <a href="#" className="hover:text-gray-200">
+            </Link>
+            <Link to="#" className="hover:text-gray-200">
               Danh sách
-            </a>
-            <a href="#" className="hover:text-gray-200">
+            </Link>
+            <Link to="#" className="hover:text-gray-200">
               Thêm mới
-            </a>
+            </Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
-            <a href="#" className="hover:text-gray-200">
+            <Link to="#" className="hover:text-gray-200">
               Đăng nhập
-            </a>
-            <a href="#" className="hover:text-gray-200">
+            </Link>
+            <Link to="#" className="hover:text-gray-200">
               Đăng ký
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
