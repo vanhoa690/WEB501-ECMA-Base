@@ -45,7 +45,7 @@ function Layout() {
 
             {/* MENU */}
             <div className="hidden md:flex space-x-6">
-              <Link className="hover:text-gray-300" to="/">
+              <Link className="hover:text-gray-300" to="/list">
                 Danh sách
               </Link>
               <Link className="hover:text-gray-300" to="/add">
@@ -69,7 +69,7 @@ function Layout() {
         {open && (
           <div className="md:hidden bg-gray-800 border-t border-gray-700">
             <div className="px-4 py-3 space-y-2">
-              <Link className="block hover:text-gray-300" to="/">
+              <Link className="block hover:text-gray-300" to="/list">
                 Danh sách
               </Link>
               <Link className="block hover:text-gray-300" to="/add">
